@@ -1,17 +1,20 @@
-[tool.poetry]
-name = "python-advanced-diploma"
-version = "0.1.0"
-description = ""
-authors = ["Vladimir Litvinov <vladimirlitvinov123q@gmail.com>"]
-readme = "README.md"
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-fastapi = "^0.109.0"
-jinja2 = "^3.1.3"
-uvicorn = "^0.27.0"
+markers = [
+    "token: тесты для проверки токена в header запроса",
+    "user: тесты для проверки вывода данных о пользователе",
+    "tweet: тесты для проверки создания, вывода и удаления твитов",
+    "like: тесты для проверки создания и удаления лайков",
+    "follower: тесты для проверки создания и удаления подписок между пользователями",
+    "image: тесты для проверки загрузки изображений к твитам",
+]
 
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+asyncio_mode="auto"
