@@ -9,7 +9,7 @@ from fastapi import UploadFile
 from loguru import logger
 
 from src.config import ALLOWED_EXTENSIONS, IMAGES_FOLDER
-from src.models.images import Image
+from src.models.models import Image
 from src.utils.exeptions import CustomApiException
 
 

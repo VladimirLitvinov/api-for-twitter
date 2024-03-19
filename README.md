@@ -29,7 +29,7 @@
     ```
 3. Запускаем скрипт внутри контейнера с API для заполнения БД демонстрационными данными:
     ```
-    docker-compose exec api python3 -m src.utils.data_migrations
+    docker-compose exec app python3 -m src.utils.data_migrations
     ```
 В демонстрационных данных пользователи **test**, **test2** и **test3** уже подписаны друг на друга. 
 Добавлены твиты с изображениями и лайки к записям.

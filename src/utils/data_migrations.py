@@ -2,11 +2,7 @@ from loguru import logger
 import asyncio
 
 from src.database import async_session_maker, engine, Base
-from src.models.users import User
-from src.models.tweets import Tweet
-from src.models.likes import Like
-from src.models.images import Image
-
+from src.models.models import User, Tweet, Like, Image
 
 users = [
     {

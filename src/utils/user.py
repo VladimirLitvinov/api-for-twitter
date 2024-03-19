@@ -3,8 +3,8 @@ from http import HTTPStatus
 from loguru import logger
 
 from src.database import async_session_maker
-from src.models.users import User
-from src.services.user import UserService
+from src.models.models import User
+from src.services.services import UserService
 from src.utils.exeptions import CustomApiException
 from src.utils.token import TOKEN
 
